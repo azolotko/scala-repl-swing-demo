@@ -23,15 +23,6 @@ object App extends scala.App {
     }
   })
 
-  def interpret(code: String): Unit = {
-    import Results._
-    val res = interpreter.interpret(code) match {
-      case Success => "OK!"
-      case _       => "Sorry, try again."
-    }
-    println(res)
-  }
-
   def show(): Unit = {
     frame.setMinimumSize(new Dimension(800, 600))
     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE)
